@@ -1,0 +1,63 @@
+body {
+    background: #0f172a;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+.package-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 50px;
+}
+
+/* Glass Card */
+.glass-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.1);
+    cursor: pointer;
+    transition: 0.4s;
+}
+.glass-card:hover { transform: scale(1.05); background: rgba(255,255,255,0.1); }
+.glass-card img { width: 100%; border-radius: 20px 20px 0 0; }
+
+/* Side Panel - මේක තමයි Trick එක */
+.side-panel {
+    height: 100%;
+    width: 0; /* මුලින් පේන්නේ නැහැ */
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(25px);
+    overflow-x: hidden;
+    transition: 0.5s; /* Slide වෙන වේගය */
+    padding-top: 60px;
+    z-index: 1000;
+}
+
+.panel-data { padding: 40px; color: #fff; }
+.price-tag { font-size: 30px; color: #00CEC8; margin: 10px 0; font-weight: bold; }
+.group-info { color: #ffcc00; font-size: 13px; font-style: italic; }
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.book-now {
+    width: 100%;
+    padding: 15px;
+    background: #00CEC8;
+    border: none;
+    border-radius: 10px;
+    margin-top: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
